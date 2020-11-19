@@ -1,6 +1,9 @@
-.friend-list .item {
+.item {
   display: flex;
   align-items: center;
+  width: 270px;
+  height: 100px;
+  padding: 10px;
   background-color: #fff;
   border-radius: 3px;
   margin: 0 auto 30px;
@@ -8,26 +11,25 @@
 }
 
 .status {
-  content: '';
-  display: inline-block;
   width: 20px;
   height: 20px;
   border-radius: 50%;
 }
 
-.friend-list .status.active {
+.status.active {
   background-color: green;
 }
-.friend-list .status.inactive {
+.status.inactive {
   background-color: red;
 }
 
-.friend-list .name {
+.name {
   color: black;
   font-size: 20px;
   font-weight: 700;
 }
 
-.friend-list .avatar {
+.avatar {
+  width: 100px;
   margin: auto 10px;
 }

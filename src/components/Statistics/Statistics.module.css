@@ -17,7 +17,7 @@
   color: #4c555a;
   margin-bottom: 30px;
 }
-.stat-list {
+.statList {
   display: flex;
   justify-content: space-between;
 }
@@ -29,14 +29,14 @@
   text-align: center;
 }
 
-.item .label {
+.label {
   display: block;
   color: #fff;
   text-transform: lowercase;
   margin-bottom: 5px;
 }
 
-.item .percentage {
+.percentage {
   display: block;
   font-size: 18px;
 }
