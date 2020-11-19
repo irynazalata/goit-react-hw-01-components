@@ -1,6 +1,7 @@
 import React from 'react';
 import './Profile.css';
 import StatsItem from './Stats_item/Stats_item';
+import propTypes from 'prop-types';
 
 const Profile = ({ avatar, name, tag, location, stats }) => {
   return (
@@ -20,4 +21,13 @@ const Profile = ({ avatar, name, tag, location, stats }) => {
     </div>
   );
 };
+
+Profile.propTypes = {
+  avatar: propTypes.string.isRequired,
+  name: propTypes.string.isRequired,
+  tag: propTypes.string.isRequired,
+  location: propTypes.string.isRequired,
+  stats: propTypes.oneOfType([propTypes.object, propTypes.array]).isRequired,
+};
+
 export default Profile;
