@@ -7,17 +7,19 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.status::before {
+.status {
   content: '';
   display: inline-block;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: red;
 }
 
-.friend-list .item.active .status::before {
+.friend-list .status.active {
   background-color: green;
+}
+.friend-list .status.inactive {
+  background-color: red;
 }
 
 .friend-list .name {

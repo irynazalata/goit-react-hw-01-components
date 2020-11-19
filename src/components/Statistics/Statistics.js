@@ -5,7 +5,7 @@ import propTypes from 'prop-types';
 const Statistics = ({ title, stats }) => {
   return (
     <section className="statistics">
-      <h2 className="title">{title}</h2>
+      {title && <h2 className="title">{title}</h2>}
 
       <ul className="stat-list">
         {stats.map(props => {
@@ -28,10 +28,6 @@ const Statistics = ({ title, stats }) => {
       </ul>
     </section>
   );
-};
-
-Statistics.defaultProps = {
-  title: '',
 };
 
 Statistics.propTypes = {

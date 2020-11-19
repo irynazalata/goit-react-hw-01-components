@@ -2,15 +2,11 @@ import React from 'react-dom';
 import propTypes from 'prop-types';
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
-  const itemClasses = ['item'];
-
-  if (isOnline) {
-    itemClasses.push('active');
-  }
+  const statusClasses = ['status', isOnline ? 'active' : 'inactive'];
 
   return (
-    <li className={itemClasses.join(' ')}>
-      <span className="status">{isOnline}</span>
+    <li className="item">
+      <span className={statusClasses.join(' ')}>{isOnline}</span>
       <img className="avatar" src={avatar} alt="" width="48" />
       <p className="name">{name}</p>
     </li>
