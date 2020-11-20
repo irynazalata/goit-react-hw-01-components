@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Statistics.module.css';
 import propTypes from 'prop-types';
+import StatisticsItem from './StatisticsItem/StatisticsItem';
 
 const randomColor = () => {
   let random1 = Math.round(Math.random() * 255);
@@ -18,16 +19,11 @@ const Statistics = ({ title, stats }) => {
         {stats.map(props => {
           let backgroundColor = randomColor();
           return (
-            <li
-              className={styles.item}
+            <StatisticsItem
               key={props.id}
-              style={{
-                backgroundColor: `${backgroundColor}`,
-              }}
-            >
-              <span className={styles.label}>{props.label}</span>
-              <span className={styles.percentage}>{props.percentage}%</span>
-            </li>
+              backgroundColor={backgroundColor}
+              props={props}
+            />
           );
         })}
       </ul>
