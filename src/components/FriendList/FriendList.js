@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './FriendList.module.css';
 import FriendListItem from './FriendListItem/FriendListItem';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const FriendList = ({ friends }) => {
   const items = friends.map(props => (
@@ -11,7 +11,7 @@ const FriendList = ({ friends }) => {
 };
 
 FriendList.propTypes = {
-  friends: propTypes.oneOfType([propTypes.object, propTypes.array]).isRequired,
+  friends: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
 };
 
 export default FriendList;

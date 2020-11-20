@@ -1,5 +1,5 @@
 import React from 'react-dom';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styles from '../FriendList.module.css';
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
@@ -19,8 +19,8 @@ FriendListItem.defaultProps = {
   isOnline: false,
 };
 FriendListItem.propTypes = {
-  avatar: propTypes.string.isRequired,
-  name: propTypes.string.isRequired,
-  isOnline: propTypes.bool.isRequired,
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
 };
 export default FriendListItem;

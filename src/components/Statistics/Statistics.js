@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Statistics.module.css';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import StatisticsItem from './StatisticsItem/StatisticsItem';
 
 const randomColor = () => {
@@ -32,8 +32,8 @@ const Statistics = ({ title, stats }) => {
 };
 
 Statistics.propTypes = {
-  title: propTypes.string,
-  stats: propTypes.oneOfType([propTypes.object, propTypes.array]).isRequired,
+  title: PropTypes.string,
+  stats: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
 };
 
 export default Statistics;

@@ -1,6 +1,6 @@
 import React from 'react-dom';
 import styles from '../Profile.module.css';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const StatsItem = ({ el: [key, value] }) => {
   return (
@@ -12,7 +12,7 @@ const StatsItem = ({ el: [key, value] }) => {
 };
 
 StatsItem.propTypes = {
-  el: propTypes.array.isRequired,
+  el: PropTypes.array.isRequired,
 };
 
 export default StatsItem;

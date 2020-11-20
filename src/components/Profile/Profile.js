@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Profile.module.css';
 import StatsItem from './Stats_item/Stats_item';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const Profile = ({ avatar, name, tag, location, stats }) => {
   return (
@@ -27,11 +27,11 @@ Profile.defaultProps = {
   location: 'Unknown',
 };
 Profile.propTypes = {
-  avatar: propTypes.string.isRequired,
-  name: propTypes.string.isRequired,
-  tag: propTypes.string.isRequired,
-  location: propTypes.string.isRequired,
-  stats: propTypes.oneOfType([propTypes.object, propTypes.array]).isRequired,
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  stats: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
 };
 
 export default Profile;
