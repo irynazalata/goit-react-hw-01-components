@@ -3,9 +3,7 @@ import propTypes from 'prop-types';
 import styles from '../FriendList.module.css';
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
-  const statusClasses = [
-    isOnline ? styles.active : styles.inactive,
-  ];
+  const statusClasses = [isOnline ? styles.active : styles.inactive];
 
   return (
     <li className={styles.item}>
@@ -16,8 +14,12 @@ const FriendListItem = ({ avatar, name, isOnline }) => {
   );
 };
 
+FriendListItem.defaultProps = {
+  name: 'Unknown',
+  isOnline: false,
+};
 FriendListItem.propTypes = {
-  avatar: propTypes.string.isRequired,
+  avatar: propTypes.string,
   name: propTypes.string.isRequired,
   isOnline: propTypes.bool.isRequired,
 };

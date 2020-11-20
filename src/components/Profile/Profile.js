@@ -22,12 +22,16 @@ const Profile = ({ avatar, name, tag, location, stats }) => {
   );
 };
 
+Profile.defaultProps = {
+  name: 'Unknown',
+  location: 'Unknown',
+};
 Profile.propTypes = {
-  avatar: propTypes.string.isRequired,
+  avatar: propTypes.string,
   name: propTypes.string.isRequired,
-  tag: propTypes.string.isRequired,
+  tag: propTypes.string,
   location: propTypes.string.isRequired,
-  stats: propTypes.oneOfType([propTypes.object, propTypes.array]).isRequired,
+  stats: propTypes.oneOfType([propTypes.object, propTypes.array]),
 };
 
 export default Profile;
