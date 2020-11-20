@@ -16,10 +16,12 @@
   border-radius: 50%;
 }
 
-.status.active {
+.active {
+  composes: status;
   background-color: green;
 }
-.status.inactive {
+.inactive {
+  composes: status;
   background-color: red;
 }
 

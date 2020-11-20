@@ -2,6 +2,13 @@ import React from 'react';
 import styles from './Statistics.module.css';
 import propTypes from 'prop-types';
 
+const randomColor = () => {
+  let random1 = Math.round(Math.random() * 255);
+  let random2 = Math.round(Math.random() * 255);
+  let random3 = Math.round(Math.random() * 255);
+  return `rgb(${random1}, ${random2}, ${random3})`;
+};
+
 const Statistics = ({ title, stats }) => {
   return (
     <section className={styles.statistics}>
@@ -9,15 +16,13 @@ const Statistics = ({ title, stats }) => {
 
       <ul className={styles.statList}>
         {stats.map(props => {
-          let random1 = Math.round(Math.random() * 255);
-          let random2 = Math.round(Math.random() * 255);
-          let random3 = Math.round(Math.random() * 255);
+          let backgroundColor = randomColor();
           return (
             <li
               className={styles.item}
               key={props.id}
               style={{
-                backgroundColor: `rgb(${random1}, ${random2}, ${random3})`,
+                backgroundColor: `${backgroundColor}`,
               }}
             >
               <span className={styles.label}>{props.label}</span>
