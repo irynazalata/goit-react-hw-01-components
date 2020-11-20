@@ -1,5 +1,4 @@
 import React from 'react-dom';
-import StatsItem from '../../Profile/Stats_item/Stats_item';
 import styles from '../Statistics.module.css';
 
 const StatisticsItem = ({ backgroundColor, props }) => {

@@ -1,3 +1,5 @@
+@value border from '../../styles/variables.module.css';
+
 .transactionHistory {
   margin: 0 auto 50px;
   width: 700px;
@@ -23,8 +25,8 @@
 }
 
 .text {
-  border-right: solid 1px rgb(219, 219, 219);
-  border-left: solid 1px rgb(219, 219, 219);
+  border-right: border;
+  border-left: border;
   height: 50px;
 }
 .text:nth-child(2n-1) {
@@ -36,5 +38,5 @@
   color: rgb(95, 95, 95);
 }
 .item:not(:last-child) {
-  border-right: solid 1px rgb(219, 219, 219);
+  border-right: border;
 }
