@@ -27,11 +27,11 @@ Profile.defaultProps = {
   location: 'Unknown',
 };
 Profile.propTypes = {
-  avatar: propTypes.string,
+  avatar: propTypes.string.isRequired,
   name: propTypes.string.isRequired,
-  tag: propTypes.string,
+  tag: propTypes.string.isRequired,
   location: propTypes.string.isRequired,
-  stats: propTypes.oneOfType([propTypes.object, propTypes.array]),
+  stats: propTypes.oneOfType([propTypes.object, propTypes.array]).isRequired,
 };
 
 export default Profile;

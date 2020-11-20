@@ -33,7 +33,7 @@ const Statistics = ({ title, stats }) => {
 
 Statistics.propTypes = {
   title: propTypes.string,
-  stats: propTypes.oneOfType([propTypes.object, propTypes.array]),
+  stats: propTypes.oneOfType([propTypes.object, propTypes.array]).isRequired,
 };
 
 export default Statistics;

@@ -12,7 +12,7 @@ const StatsItem = ({ el: [key, value] }) => {
 };
 
 StatsItem.propTypes = {
-  el: propTypes.array,
+  el: propTypes.array.isRequired,
 };
 
 export default StatsItem;
